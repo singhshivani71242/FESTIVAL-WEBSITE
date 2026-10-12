@@ -1,0 +1,511 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+   
+}
+
+:root {
+    --green: #174b38;
+    --orange: #e58a35;
+    --cream: #fffaf1;
+    --dark: #252820;
+    --muted: #77786e;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cream);
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Navigation */
+header {
+    background-color: var(--cream);
+    border-bottom: 1px solid #eee6d8;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    color: var(--green);
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--orange);
+}
+
+.nav-btn,
+.primary-btn {
+    display: inline-block;
+    background-color: var(--green);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover,
+.primary-btn:hover {
+    background-color: var(--orange);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    max-width: 1250px;
+    min-height: 560px;
+    margin: auto;
+    padding: 70px 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.eyebrow {
+    color: #b76c28;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.12;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.hero h1 span,
+.section-heading h2 span {
+    color: var(--orange);
+    font-style: italic;
+}
+
+.hero-text {
+    color: var(--muted);
+    max-width: 450px;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.hero-note {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 30px;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    height: 410px;
+    border-radius: 180px 180px 8px 8px;
+    object-position: center;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 20px;
+    left: -20px;
+    background-color: white;
+    padding: 13px 20px;
+    border-radius: 5px;
+    box-shadow: 0 8px 25px #00000012;
+    font-size: 13px;
+}
+
+.image-label span {
+    color: var(--orange);
+    margin-right: 8px;
+}
+
+/* Shared Sections */
+.section {
+    padding: 85px 5%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 43px);
+    font-weight: normal;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* Festival Cards */
+.festivals {
+    background-color: #f5eee2;
+}
+
+.festival-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.festival-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.festival-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px #00000012;
+}
+
+.festival-card img {
+    height: 210px;
+    transition: transform 0.4s;
+}
+
+.festival-card:hover img {
+    transform: scale(1.04);
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.tag {
+    display: inline-block;
+    color: #ad6b2c;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.card-content h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: var(--green);
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: var(--muted);
+    font-size: 13px;
+    min-height: 65px;
+    margin-bottom: 16px;
+}
+
+.card-content a {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--green);
+}
+
+.card-content a:hover {
+    color: var(--orange);
+}
+
+/* Traditions */
+.tradition-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.tradition-item {
+    padding: 32px 18px;
+    text-align: center;
+    border: 1px solid #e9e1d3;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.tradition-item:hover {
+    background-color: white;
+    border-color: var(--orange);
+    transform: translateY(-5px);
+}
+
+.tradition-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.tradition-item h3 {
+    color: var(--green);
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.tradition-item p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Regional Culture */
+.regions {
+    background-color: #f5eee2;
+}
+
+.region-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.region-card {
+    min-height: 240px;
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 8px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.region-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.8)
+    );
+    transition: background 0.3s;
+}
+
+.region-card > div {
+    position: relative;
+    z-index: 1;
+}
+
+.region-card span {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.region-card h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    margin: 5px 0;
+}
+
+.region-card p {
+    font-size: 13px;
+}
+
+.north {
+    background-image: url("https://img.freepik.com/premium-photo/happy-lohri-baisakhi-vaisakhi-festival-celebration_834602-56895.jpg?w=2000");
+}
+
+.south {
+    background-image: url("https://th.bing.com/th/id/OIP.O77lKmTBUn2sXcn1TPIYNAHaE7?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3");
+}
+
+.east {
+    background-image: url("https://tse1.explicit.bing.net/th/id/OIP.VmRm7dA-9doZJ0UpFI1UVwHaEQ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3");
+}
+
+.west {
+    background-image: url("https://th.bing.com/th?id=OIF.whO9w%2fMPa%2fE8mU2%2bqtYYIw&r=0&rs=1&pid=ImgDetMain&o=7&rm=3");
+}
+
+/* Closing Banner */
+.closing {
+    text-align: center;
+    padding: 85px 5%;
+    background-color: var(--green);
+    color: white;
+}
+
+.closing .eyebrow {
+    color: #f2bd78;
+}
+
+.closing h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 45px);
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.closing > p:not(.eyebrow) {
+    color: #e0e6df;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.closing .primary-btn {
+    background-color: var(--orange);
+}
+
+/* Footer */
+footer {
+    padding: 35px 5%;
+    text-align: center;
+    background-color: #12382b;
+    color: #e5e8e1;
+}
+
+.footer-logo {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+footer p {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #c2d0c5;
+}
+
+.copyright {
+    border-top: 1px solid #ffffff20;
+    margin-top: 22px;
+    padding-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 950px) {
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero {
+        gap: 30px;
+    }
+
+    .festival-grid,
+    .tradition-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px 4%;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 45px;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-image img {
+        height: 330px;
+    }
+
+    .image-label {
+        left: 10px;
+    }
+
+    .section {
+        padding: 60px 5%;
+    }
+
+    .festival-grid,
+    .tradition-grid,
+    .region-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .festival-card img {
+        height: 240px;
+    }
+
+    .region-card {
+        min-height: 220px;
+    }
+}
